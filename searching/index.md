@@ -4,7 +4,7 @@ Given an array, the simplest way to search for an value is to look at every elem
 
 Search methods on array in JS: indexOf, includes, find, findIndex
 
-**Linear Search Pseudo code**
+**Linear Search Pseudocode**
 
 - This function accepts an array and a value
 - Loop through the array and check if the current array element is equal to the value
@@ -17,7 +17,7 @@ Search methods on array in JS: indexOf, includes, find, findIndex
 - Rather than eliminating one element at a time, you can eliminate half of the remaining elements at a time
 - Binary search only works on sorted arrays!
 
-**Binary Search Pseudo code**
+**Binary Search Pseudocode**
 
 - This function accepts a sorted array and a value
 - Create a left point at the start of the array and a right point at the end of the array
@@ -28,3 +28,14 @@ Search methods on array in JS: indexOf, includes, find, findIndex
   - If the value is too large, move the left pointer down
 - If you never find the value, return -1
 
+
+## Naive string
+
+**Naive string Pseudocode**
+
+- Loop over the longer string
+- Loop over the shorter string
+- If the characters don't match, break you of the inner loop
+- If the characters do match, keep going
+- If the complete the inner loop and find a match, increment the count of matches
+- Return the count
