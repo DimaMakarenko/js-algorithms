@@ -108,7 +108,29 @@ Builds up the sort by gradually creating a larger left half which is always sort
 - When the helper returns to you the updated pivot index, recursively call the pivot helper on the sub array to the left on that index, and the sub array to the right of that index
 - Your base case occurs when you consider a sub array with less than 2 elements
 
+
+## Radix Sort
+
+- Radix sort is a special sorting algorithm that works on lists of number
+- It never makes comparisons between elements
+- It exploits the fact that information about size of a number is encoded in the number of digits
+- More digits means a bigger number
+
+***Pseudocode***
+
+- Define a function that accepts list of numbers
+- Figure out how many digits the largest number has
+- Loop from **k = 0** up to this largest number of digits
+- For each iteration of the loop:
+  - Create buckets for each digit (0 to 9)
+  - Place each number in the corresponding bucket based on its **k**th digit
+- Replace out existing array with values in out buckets, starting with 0 and going up to 9
+- Return list at the end
+
 ## Big O of Sorting Algorithms
+
+n* - length of array
+k* - number of digits(average)
 
 Algorithm | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) |Space Complexity
 --- | --- | --- | --- |--- 
@@ -117,3 +139,5 @@ Insertion Sort | O(n) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(1)|
 Selection Sort | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(1)|
 Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n)
 Quick Sort | O(n log n) | O(n log n) | O(n<sup>2</sup>) | O(log n)
+Radix Sort | O(nk) | O(nk) | O(nk) | O(n + k)
+
